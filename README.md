@@ -1,6 +1,6 @@
-# Pet Home Companion
+# Smart Pet Care
 
-This is the project submission for **Pet Home Companion**. If you want to learn about Pet Home Companion, you can go to our website [Pet Home Companion](https://iotcolumbia2019glzz.weebly.com/) or [Github Page](https://github.com/guoshanglin/Smart-Pet-Care). 
+This is project **Smart Pet Care**. If you want to learn about Smart Pet Care, you can go to our website [Smart Pet Care](https://iotcolumbia2019glzz.weebly.com/) or [Github Page](https://github.com/guoshanglin/Smart-Pet-Care). 
 
 # Files
 
@@ -13,4 +13,3 @@ The files in this submission are organized under four directories: Lambda, ML, M
 * The **MQTT** directory contains the scripts that are deployed on three Raspberry Pi scanning stations that evertually publish the data via MQTT to [AWS IoT Platform](https://aws.amazon.com/iot-core/). 
 	* The **MQTT_PI_1.py** script running on the master node not only publishes the distance data, but also collects the weight data and controls the servo when instructed.
 * The **Website** directory contains the web application that is implemented using Node.js. 
-
