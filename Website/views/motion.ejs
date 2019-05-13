@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cat Motion</title>
+    <meta http-equiv="cache-control" content="max-age=0" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="refresh" content="<%=TIME_INTERVAL%>" />
+    <link rel="stylesheet" type="text/css" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    <link rel="stylesheet" type="text/css" 
+    href="/stylesheet/index.css">
+</head>
+
+
+<body>
+
+<div class="header">
+<h2 class="ui header">
+  <img class="ui image" src="/views/image/cat_icon.png">
+  <div class="content"> Pet Care </div>
+</h2>
+</div>
+
+
+<div>
+
+<div class="ui card">
+  <div class="content"> Camera At Home </div>
+  <div class="image">
+    <img src="https://s3.amazonaws.com/iot6765project/webapp/result.jpg">
+  </div>
+
+  <div class="content"> Last Time See The Pet </div>
+  <div class="image">
+    <img src="https://s3.amazonaws.com/iot6765project/webapp/result_cat.jpg">
+  </div>
+</div>
+
+
+<div class="ui card">
+  <div class="image">
+    <iframe width="400" height="400" frameborder="0" scrolling="no" 
+    src="//plot.ly/~zzaustc/6.embed"></iframe>
+  </div>
+  <div class="content">
+    <div class="right floated meta">Status: Normal</div>
+    <div> Motion X-Y Plot </div>
+  </div>
+
+<div>
+    <div id="status">
+        <div class="content">
+            <div> Weight: </div>
+        </div>
+        <% if (feed[0]["weight"]>4) {%>
+        <button class="ui green button">Normal</button>
+        <%} else {%>
+        <button class="ui red button">TOO LOW!</button>
+        <%} %>
+
+        <div class="content">
+            <div> Status: </div>
+        </div>
+        <% if (feed[0]["active"]==0) {%>
+        <button class="ui yellow button">Sleep</button>
+        <%} else {%>
+        <button class="ui blue button">Active</button>
+        <%} %>
+    </div>
+
+    <div class="image" id="status">
+        <% if (feed[0]["active"]==0) {%>
+        <img id="active" src="/views/image/sleep.gif">
+        <%} else {%>
+        <img id="active" src="/views/image/active.gif">
+        <%} %>
+    </div>
+</div>
+</div>
+
+
+
+<div class="ui card">
+<table>
+    <tr>
+        <th>Time</th>
+        <th>Motion</th>
+        <th>Weight</th>
+        <th>Status</th>
+    </tr>
+
+    <% for (var i = 0; i<feed.length; i++) {%>
+        <tr>
+            <td> <%=feed[i]["date"]%> </td>
+            <td> <%=feed[i]["motion"]%> </td>
+            <td> <%=feed[i]["weight"]%> </td>
+            <% if (feed[i]["weight"]<4) {%>
+            <td>Unhealth</td>
+            <%} else {%>
+            <td>Health</td>
+            <%} %>
+        </tr>
+    <% } %>
+</table>
+
+  <div class="image">
+    <iframe width="400" height="300" frameborder="0" scrolling="no" 
+    src="//plot.ly/~zzaustc/4.embed"></iframe>
+  </div>
+
+</div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+{
+  "name": "6765iot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.446.0",
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "html": "^1.0.0",
+    "install": "^0.12.2",
+    "mysql": "^2.16.0",
+    "npm": "^6.9.0",
+    "plotly": "^1.0.6"
+  }
+}

@@ -1,0 +1,44 @@
+body {
+    background: linear-gradient(89deg, #FF5EDF 0%, #04C8DE 100%);
+}
+
+.header {
+	margin: 20px;
+	padding: 5px;
+	border: 2px solid #04C8DE;
+	border-radius: 5px;
+}
+
+.ui.card {
+	float: left;
+	width: 400px;
+	height: 600px;
+	margin: 5px;
+}
+
+#status {
+	float: left;
+	width: 50%;
+}
+
+#active {
+	width: 150px;
+	height: 150px;
+}
+
+td, th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2;}
+
+tr:hover {background-color: #ddd;}
+
+th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04C8DE;
+  color: white;
+}
